@@ -7,10 +7,10 @@ module CuddlyDollop
     def run(date)
       top_ten_countries_sorted_by_revenue(date).each do |row|
         output = format(
-          'Country %s has revenue %s on date %s',
+          'Country %s has revenue %s on %s',
           row[:AdvertiserCountry],
           row[:Revenue],
-          row[:Date],
+          row[:Date].strftime('%A, %d %b %Y'),
         )
         puts output
       end
