@@ -19,7 +19,8 @@ module CuddlyDollop
     private
 
     def top_ten_countries_sorted_by_revenue(date)
-      # Implement me
+      report = @client.download_report(%i[advertisercountry], %i[revenue], date)
+      # Implement the rest here...
     end
   end
 end
